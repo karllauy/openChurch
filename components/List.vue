@@ -1,6 +1,16 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <div class="bg-white overflow-hidden sm:rounded-md mt-10">
+
+    <div class="mx-2 mt-4 shadow flex rounded-md">
+      <input class="w-full rounded p-2" type="text" placeholder="Search...">
+      <button class="bg-white w-auto flex justify-end items-center text-blue-500 p-2 hover:text-blue-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+    </div>
+
     <ul role="list" class="divide-y divide-gray-200">
       <li
         class="m-2 rounded-sm shadow-md border-2 border-gray-100"
@@ -56,8 +66,10 @@
         </div>
         <!-- Tags -->
         <hr class="mx-4"></hr>
-        <div class="flex mx-2 flex-wrap">
-          <div class="m-2 rounded-md bg-gray-100 text-gray-500 font-thin p-1 text-sm" v-for="activity in church.activities">
+        <div class="flex m-2 flex-wrap p-1">
+          <div class="m-1 rounded-md bg-gray-100 text-gray-500 font-thin p-1 text-sm" 
+            v-for="activity in church.activities"
+            >
             {{activity}}
           </div>
         </div>
