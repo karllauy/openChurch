@@ -1,7 +1,16 @@
 <template>
-  <Tutorial/>
+  <div>
+    <List />
+  </div>
 </template>
 
 <script>
-export default {}
+import List from '../components/List.vue'
+export default {
+  components: {
+    List,
+  },
+}
 </script>
+
+<style></style>
