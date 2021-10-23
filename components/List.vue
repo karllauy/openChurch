@@ -16,6 +16,7 @@
         class="m-2 rounded-sm shadow-md border-2 border-gray-100"
         v-for="church in churches"
         :key="church.basic_info.name"
+        @click="onClickListItem(church)"
       >
       
         <div class="flex items-center px-4 pt-4 pb-2 sm:px-6">
@@ -87,12 +88,6 @@
 </template>
 
 <script>
-import {
-  CheckCircleIcon,
-  ChevronRightIcon,
-  MailIcon,
-} from '@heroicons/vue/solid'
-
 export default {
   components: {},
   data() {
@@ -429,160 +424,14 @@ export default {
           remarks: '',
         },
       ],
-
-      // churches: [
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //       {
-      //         weekday: 'Sat',
-      //         time: '16:00',
-      //         languages: ['English'],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //       {
-      //         weekday: 'Sat',
-      //         time: '16:00',
-      //         languages: ['English'],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //       {
-      //         weekday: 'Sat',
-      //         time: '16:00',
-      //         languages: ['English'],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     name: 'ABC Church',
-      //     email: 'abc.church@example.com',
-      //     imageUrl:
-      //       'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      //     city: 'Hong Kong',
-      //     languages: ['Cantonese', 'English'],
-      //     services: [
-      //       {
-      //         weekday: 'Sun',
-      //         time: '10:00:00',
-      //         languages: ['Cantonese'],
-      //       },
-      //     ],
-      //   },
-      // ],
     }
   },
+  methods:{
+    onClickListItem(church){
+      console.log('onClickListItem',church);
+      this.$router.push('/church');
+      this.$store.commit('setChurch', church)
+    }
+  }
 }
 </script>
