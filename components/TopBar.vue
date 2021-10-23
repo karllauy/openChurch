@@ -9,9 +9,10 @@
       fixed
       top-0
       w-full
+      bg-amber-500
     "
   >
-    <h1 class="font-normal text-blue-500">Find a Church for you</h1>
+    <h1 class="font-normal text-gray-50">Find a Church for you</h1>
   </div>
 </template>
 
