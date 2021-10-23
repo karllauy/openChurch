@@ -17,9 +17,9 @@
         v-for="church in churches"
         :key="church.basic_info.name"
       >
-        <!-- <div class="block"> -->
+      
         <div class="flex items-center px-4 pt-4 pb-2 sm:px-6">
-          <!-- <div class="min-w-0 flex-1 flex items-center"> -->
+          <!-- Basic Info -->
           <div class="min-w-0 flex md:grid md:grid-cols-2 md:gap-4">
             <!-- Church Image -->
             <div class="flex flex-shrink-0 justify-center items-center">
@@ -62,12 +62,19 @@
 
             <hr />
           </div>
-          <!-- </div> -->
+
+          <!-- Bookmark button -->
+          <!-- <div class="">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+            </svg>
+          </div> -->
         </div>
+
         <!-- Tags -->
         <hr class="mx-4"></hr>
-        <div class="flex m-2 flex-wrap p-1">
-          <div class="m-1 rounded-md bg-gray-100 text-gray-500 font-thin p-1 text-sm" 
+        <div class="flex mx-2 my-1 flex-wrap p-1">
+          <div class="m-1 px-2 bg-gray-100 text-gray-500 font-thin py-1 text-sm rounded-lg" 
             v-for="activity in church.activities"
             >
             {{activity}}
@@ -195,6 +202,171 @@ export default {
             'https://www.tccc.ca/wordpress/wp-content/uploads/2020/01/45th-mural-scaled.jpg',
           basic_info: {
             name: 'Toronto Christian Community Church',
+            lat: 43.821978571268694,
+            long: -79.32863676931458,
+            phone: '+19054777533',
+            website: 'http://www.tccc.ca/',
+            email: 'admin@tccc.ca',
+            country: 'Canada',
+            province: 'Ontario',
+            city: 'Markham',
+            postcode: 'L3R 5A2',
+            denomination: 'Evangelical',
+            leader: 'Rev. Jonathan Chan',
+            address: '100 Acadia Avenue, Markham, ON L3R 5A2',
+            whatsapp: '',
+            languages: ['English', 'Cantonese', 'Mandarin'],
+          },
+          services: [
+            {
+              languages: ['Eng'],
+              weekday: 'Sun',
+              start_time: '10:30:00',
+              end_time: '',
+              max_people: '',
+              mode: 'Online',
+            },
+            {
+              languages: ['粵'],
+              weekday: 'Sun',
+              start_time: '08:15:00',
+              end_time: '',
+              max_people: '',
+              mode: 'Online',
+            },
+            {
+              languages: ['粵'],
+              weekday: 'Sat',
+              start_time: '11:15:00',
+              end_time: '',
+              max_people: '',
+              mode: 'Online',
+            },
+            {
+              languages: ['普'],
+              weekday: 'Sun',
+              start_time: '09:40:00',
+              end_time: '',
+              max_people: 50,
+              mode: 'Online',
+            },
+          ],
+          activities: [
+            'Child',
+            'Teens',
+            'Adult',
+            'Youth worship',
+            'Small group',
+            'Prayer Meeting',
+            'Summer camp',
+            'Mission Trip',
+          ],
+          remarks: '',
+        },
+        {
+          img_url:
+            'https://resources.openchurch.com/openchurch-1012112-CC0-matt-mclean-253049-PREVIEW.jpg',
+          basic_info: {
+            name: 'EFG Church',
+            lat: 22.48661464351065,
+            long: 35.5,
+            phone: '+123475629374',
+            website: 'https://www.acbchurch.org',
+            email: 'church@abcchurch.org',
+            country: 'Hidden',
+            province: 'Hidden',
+            city: 'Kowloon Tong',
+            postcode: 'Hidden',
+            denomination: 'Evangelical',
+            leader: 'B',
+            address: 'somewhere in the world',
+            whatsapp: '+123475629374',
+            languages: ['English', 'Mandarin'],
+          },
+          services: [
+            {
+              languages: ['Eng', '普'],
+              weekday: 'Sun',
+              start_time: '10:00:00',
+              end_time: '11:30:00',
+              max_people: 100,
+              mode: 'In Person',
+            },
+          ],
+          activities: ['Child', 'Teens', 'Adult', 'Small group'],
+          remarks: 'Please contact the church leaders for location',
+        },
+
+        {
+          img_url:
+            'https://resources.openchurch.com/openchurch-1012112-CC0-matt-mclean-253049-PREVIEW.jpg',
+          basic_info: {
+            name: 'CWB Chinese Church',
+            lat: 22.48661464351065,
+            long: 114.14475246187553,
+            phone: '+85226718532',
+            website: 'https://cmals.org.hk/',
+            email: 'office@cmals.org.hk',
+            country: 'Hong Kong',
+            province: 'Hong Kong',
+            city: 'Fanling',
+            postcode: '',
+            denomination: 'Evangelical',
+            leader: 'Leung Tsz Yung',
+            address: '粉嶺一鳴路23號牽晴間6座',
+            whatsapp: '+85255362902',
+            languages: ['Cantonese'],
+          },
+          services: [
+            {
+              languages: ['粵'],
+              weekday: 'Sun',
+              start_time: '09:00:00',
+              end_time: '10:30:00',
+              max_people: 50,
+              mode: 'In Person',
+            },
+            {
+              languages: ['粵'],
+              weekday: 'Sun',
+              start_time: '11:00:00',
+              end_time: '12:30:00',
+              max_people: 50,
+              mode: 'In Person',
+            },
+            {
+              languages: ['粵'],
+              weekday: 'Sat',
+              start_time: '17:00:00',
+              end_time: '18:30:00',
+              max_people: 50,
+              mode: 'In Person',
+            },
+            {
+              languages: ['粵'],
+              weekday: 'Sun',
+              start_time: '09:00:00',
+              end_time: '10:30:00',
+              max_people: 50,
+              mode: 'In Person',
+            },
+          ],
+          activities: [
+            'Child',
+            'Adult',
+            'Small group',
+            'Prayer Meeting',
+            'Summer camp',
+            'Mission Trip',
+          ],
+          remarks: '',
+        },
+
+        {
+          img_url:
+            'https://www.tccc.ca/wordpress/wp-content/uploads/2020/01/45th-mural-scaled.jpg',
+          basic_info: {
+            name: 'Kowloon Community Church',
             lat: 43.821978571268694,
             long: -79.32863676931458,
             phone: '+19054777533',
