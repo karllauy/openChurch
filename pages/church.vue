@@ -76,14 +76,14 @@
     </div>
 
     <!-- Main -->
-    <div class="m-4 flex justify-center items-center w-full">
+    <div class="m-4 flex justify-center items-center">
       <!-- Church Image -->
       <div class="w-1/3 flex flex-shrink-0 justify-center items-center mr-2">
         <img class="h-24 w-24 rounded-full" :src="church.img_url" alt="" />
       </div>
 
       <div class="w-2/3 flex flex-col">
-        <p class="text-xl font-medium text-indigo-600 truncate">
+        <p class="text-xl font-medium text-indigo-600">
           {{ church.basic_info.name }}
         </p>
         <p class=""></p>
