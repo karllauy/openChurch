@@ -1,5 +1,4 @@
 export const state = () => ({
-  church: null,
   churches: [
     {
       img_url:
@@ -332,6 +331,39 @@ export const state = () => ({
       remarks: '',
     },
   ],
+  church: {
+    img_url:
+      'https://resources.openchurch.com/openchurch-1012112-CC0-matt-mclean-253049-PREVIEW.jpg',
+    basic_info: {
+      name: 'ABC Church',
+      lat: 22.48661464351065,
+      long: 35.5,
+      phone: '+123475629374',
+      website: 'https://www.acbchurch.org',
+      email: 'church@abcchurch.org',
+      country: 'Hidden',
+      province: 'Hidden',
+      city: 'Kowloon Tong',
+      postcode: 'Hidden',
+      denomination: 'Evangelical',
+      leader: 'B',
+      address: 'somewhere in the world',
+      whatsapp: '+123475629374',
+      languages: ['English', 'Mandarin'],
+    },
+    services: [
+      {
+        languages: ['Eng', '普'],
+        weekday: 'Sun',
+        start_time: '10:00:00',
+        end_time: '11:30:00',
+        max_people: 100,
+        mode: 'In Person',
+      },
+    ],
+    activities: ['Child', 'Teens', 'Adult', 'Small group'],
+    remarks: 'Please contact the church leaders for location',
+  },
 })
 
 export const mutations = {

@@ -122,7 +122,52 @@
         />
       </svg>
     </div>
-  <BottomNavi />
+
+    <!-- Basic Info Details -->
+    <div class="my-2 mx-3 flex flex-col shadow-md">
+      <!-- Address -->
+      <div class="flex justify-between items-center w-full p-2">
+        <div class="flex flex-col items-center mx-5 p-1 text-lg">
+          <div class="mt-1">{{ church.basic_info.address }}</div>
+          <a
+            target="_blank"
+            :href="
+              'https://maps.google.com/?q=' +
+              church.basic_info.lat +
+              ',' +
+              church.basic_info.long
+            "
+            class="text-gray-600 italic text-sm underline self-start"
+            >Get Direction Now</a
+          >
+        </div>
+        <a
+          target="_blank"
+          :href="
+            'https://maps.google.com/?q=' +
+            church.basic_info.lat +
+            ',' +
+            church.basic_info.long
+          "
+          class="w-16 h-16 bg-gray-100 flex justify-center items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7 text-amber-500"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <BottomNavi />
   </div>
 </template>
 
