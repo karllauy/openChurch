@@ -86,12 +86,13 @@
           <img class="h-24 w-24 rounded-full" :src="church.img_url" alt="" />
         </div>
 
-        <div class="ml-2 w-2/3 flex flex-col">
+        <div class="w-2/3 flex flex-col">
           <!-- Church location tag-->
           <div class="flex flex-wrap">
             <div
               class="
-                m-1
+                my-1
+                mr-2
                 px-2
                 bg-pink-100
                 text-pink-500
@@ -105,7 +106,7 @@
             </div>
             <div
               class="
-                m-1
+                my-1
                 px-2
                 bg-blue-100
                 text-blue-500
@@ -120,7 +121,7 @@
           </div>
 
           <!-- Church name-->
-          <p class="mt-2 ml-2 text-xl font-medium text-indigo-600 truncate">
+          <p class="mt-2 text-xl font-medium text-indigo-600 truncate">
             {{ church.basic_info.name }}
           </p>
         </div>
