@@ -26,8 +26,17 @@
         :key="church.basic_info.name"
         @click="onClickListItem(church)"
       >
-      
-        <div class="flex items-center px-4 pt-4 pb-2 sm:px-6">
+        <!-- Church location tag-->
+        <div class="flex mx-3 my-5px flex-wrap p-1">
+          <div class="m-1 px-2 bg-pink-100 text-pink-500 font-thin py-1 text-sm rounded-lg">
+            {{church.basic_info.country}}
+          </div>
+          <div class="m-1 px-2 bg-blue-100 text-blue-500 font-thin py-1 text-sm rounded-lg">
+            {{church.basic_info.city}}
+          </div>
+        </div>
+        
+        <div class="flex items-center px-4 pt-2 pb-2 sm:px-6">
           <!-- Basic Info -->
           <div class="min-w-0 flex md:grid md:grid-cols-2 md:gap-4">
             <!-- Church Image -->
@@ -38,7 +47,7 @@
                 alt=""
               />
             </div>
-
+            
             <div class="mx-3">
               <!-- Church Name -->
               <p class="text-sm font-medium text-indigo-600 truncate">
