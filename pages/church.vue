@@ -122,12 +122,15 @@
         />
       </svg>
     </div>
+  <BottomNavi />
   </div>
 </template>
 
 <script>
+import BottomNavi from '../components/BottomNavi'
+
 export default {
-  components: {},
+  components: { BottomNavi },
   data() {
     return {}
   },
