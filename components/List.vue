@@ -32,7 +32,7 @@
             {{church.basic_info.country}}
           </div>
           <div class="m-1 px-2 bg-blue-100 text-blue-500 font-thin py-1 text-sm rounded-lg">
-            {{church.basic_info.city}}
+            {{church.basic_info.province}}
           </div>
         </div>
         
