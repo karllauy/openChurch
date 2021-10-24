@@ -260,19 +260,20 @@
           </a>
         </div>
       </div>
-    </div>
 
-    <div class="my-2 mx-3 flex flex-col shadow-md">
-      <span class="mx-4 text-lg mt-2">Photos</span>
-      <div class="flex flex-wrap mx-4 mt-2 mb-5">
-        <img
-          class="mx-1 rounded-lg w-24 h-24"
-          v-for="img in sampleImages"
-          :src="img.url"
-          alt="sample image"
-        />
+      <!-- Photos -->
+      <div class="my-2 mx-3 flex flex-col shadow-md">
+        <span class="mx-4 text-lg mt-2">Photos</span>
+        <div class="flex flex-wrap mx-4 mt-2 mb-5">
+          <img
+            class="mx-1 rounded-lg w-24 h-24"
+            v-for="img in sampleImages"
+            :src="img.url"
+            alt="sample image"
+          />
+        </div>
+        <span class="text-amber-500 m-4 font-bold">View all photos</span>
       </div>
-      <span class="text-amber-500 m-4 font-bold">View all photos</span>
     </div>
 
     <BottomNavi />
