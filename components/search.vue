@@ -43,15 +43,15 @@
         <span class="mr-2">我想搵人傾下偈</span>
       </button>
     </div>
-    <div class="flex flex-col">
-      <div class="text-xl ml-7 mt-3">按國家找教會</div>
+    <div class="flex flex-col mx-4 my-4 p-3">
+      <div class="text-xl">按國家找教會</div>
       <div class="">
         <ul role="button" class="flex overflow-scroll">
           <button
             class="
-              h-64
-              w-1/2
-              m-2
+              h-48
+              w-48
+              m-1
               rounded-xl
               shadow-md
               border-2 border-gray-100
