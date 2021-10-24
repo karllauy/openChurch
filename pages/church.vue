@@ -78,7 +78,7 @@
     <!-- Main -->
     <div class="m-4 flex justify-center items-center">
       <!-- Church Image -->
-      <div class="w-1/3 flex flex-shrink-0 justify-center items-center mr-2">
+      <div class="w-1/3 flex flex-shrink-0 justify-center items-center">
         <img class="h-24 w-24 rounded-full" :src="church.img_url" alt="" />
       </div>
 
@@ -215,6 +215,19 @@
       </div>
     </div>
 
+    <div class="my-2 mx-3 flex flex-col shadow-md">
+      <span class="mx-4 text-lg mt-2">Photos</span>
+      <div class="flex flex-wrap mx-4 mt-2 mb-5">
+        <img
+          class="mx-1 rounded-lg w-24 h-24"
+          v-for="img in sampleImages"
+          :src="img.url"
+          alt="sample image"
+        />
+      </div>
+      <span class="text-amber-500 m-4 font-bold">View all photos</span>
+    </div>
+
     <BottomNavi />
   </div>
 </template>
@@ -225,7 +238,13 @@ import BottomNavi from '../components/BottomNavi'
 export default {
   components: { BottomNavi },
   data() {
-    return {}
+    return {
+      sampleImages: [
+        { id: 1, url: this.$store.state.church.img_url },
+        { id: 2, url: this.$store.state.church.img_url },
+        { id: 3, url: this.$store.state.church.img_url },
+      ],
+    }
   },
   methods: {
     onClickBackButton() {
